@@ -40,7 +40,7 @@ def create_composite_alarm(instance_ids, threshold):
     print(f"Composite alarm {response['CompositeAlarmArn']} created successfully.")
 
 def lambda_handler(event, context):
-    instance_ids = ['i-04bd6c3c94932cf0c', 'i-0c7f831c5f650bd78']  # Replace with your actual instance IDs
+    instance_ids = ['i-04bd6c3c94932cf0c', 'i-0c7f831c5f650bd78']  # Sending the list of Instance IDs for which the CloudWatch Alarm is to be set.
     threshold = 50  # Set the threshold value as per your requirement
 
     create_composite_alarm(instance_ids, threshold)
